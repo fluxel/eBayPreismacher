@@ -9,6 +9,7 @@ namespace Fluxel.Ebay.PreisMacher.Main
 
         public virtual ObservableCollection<EbayCategory> EbayCategories { get; set; }
         public virtual EbayCategory SelectedEbayCategory { get; set; }
+        public virtual int EbayListingFee { get; set; }
         public virtual int PayPalSalesValue { get; set; }
         public virtual PayPalFee PayPalFee { get; set; }
         public virtual decimal Shipping { get; set; }

@@ -12,12 +12,12 @@ namespace Fluxel.Ebay.PreisMacher.Lib
     public static class CalculatorRepository
     {
 
-        public static CalculationResult ByCategoryAndPayPal(EbayCategory category, decimal netto, PayPalFee payPalFee, decimal mwst = 19m)
+        public static CalculationResult ByCategoryAndPayPal(EbayCategory category, decimal netto, PayPalFee payPalFee, decimal listingFee = 0, decimal mwst = 19m)
         {
             var fNetto = netto.GetNettoFix(payPalFee, category);
             var fBrutto = fNetto.AddVat(mwst).RoundBrutto(2);
             
-            var percentageFee = category.Percentage*100m + payPalFee.Percentage*100m;
+            var percentageFee = category.Percentage*100m + payPalFee.Percentage*100m + listingFee*100m;
             var value = 0m;
             while (true)
             {

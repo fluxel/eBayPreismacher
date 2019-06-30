@@ -32,7 +32,7 @@ namespace Fluxel.Ebay.PreisMacher
 
             var ws = ds.Find<IWindowService>();
             ws.Navigate(ds.Find<MainController>());
-            ws.BaseWindow.Height = 700;
+            ws.BaseWindow.Height = 730;
             ws.BaseWindow.MinHeight = ws.BaseWindow.Height;
             ws.BaseWindow.Width = 400;
             ws.BaseWindow.MinWidth = ws.BaseWindow.Width;

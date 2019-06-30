@@ -31,7 +31,7 @@ namespace Fluxel.Ebay.PreisMacher.Main
             }
             
             var r = CalculatorRepository.ByCategoryAndPayPal(m.SelectedEbayCategory,
-                m.Net + m.Shipping, m.PayPalFee);
+                m.Net + m.Shipping, m.PayPalFee, m.EbayListingFee/100m);
 
             var nettoShipping = m.Shipping * (m.ShippingExclusive ? 1 : 0);
             var bruttoShipping = nettoShipping * (m.BruttoExlusiveShipping ? shippingVat : 1);

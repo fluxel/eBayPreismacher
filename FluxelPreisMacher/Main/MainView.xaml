@@ -49,6 +49,9 @@
                     </TextBlock>
                 </Grid>
 
+                <Label Content="eBay Anzeigetarif:" />
+                <TextBox Text="{Binding EbayListingFee, Converter={StaticResource DecimalStringConverter}}" />
+
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -95,7 +98,7 @@
         </GroupBox>
 
         <StackPanel Orientation="Vertical" Grid.Row="1">
-            <Button Command="{Binding CalcCommand}" Content="Berechnen" />
+            <Button Command="{Binding CalcCommand}" Content="_Berechnen" />
         </StackPanel>
 
         <GroupBox Grid.Row="2" Header="Ergebnis">
